@@ -1,0 +1,25 @@
+.Sidebar {
+	position: relative;
+	width: var(--sidebar-width);
+	height: 100vh;
+	transition: 0.3s;
+	background-color: var(--inverted-bg-color);
+
+}
+
+
+
+
+
+
+
+.collapsedBnt {
+	position: absolute;
+	right: -32px;
+	bottom: 32px;
+}
+
+
+.collapsed {
+	width: var(--sidebar-width-collapsed);
+}

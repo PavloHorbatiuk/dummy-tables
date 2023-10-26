@@ -1,0 +1,60 @@
+@import './reset';
+@import './variables/global';
+@import './themes/normal';
+@import './themes/dark';
+
+body {
+	color: var(--primary-color);
+	font: var(--font-m);
+}
+
+.app {
+	min-height: 100vh;
+	background: var(--bg-color);
+}
+
+.content-page {
+	display: flex;
+}
+
+.page-wrapper {
+	flex-grow: 1;
+	padding: 20px;
+}
+
+.btn {
+	width: 70px;
+	height: 34px;
+	border-radius: 80px;
+	background-color: var(--button-primary);
+	font-size: 16px;
+	font-weight: 400;
+}
+
+table {
+	table-layout: fixed;
+	width: auto;
+	border-collapse: collapse;
+	border: 3px solid purple;
+}
+
+thead th:nth-child(1) {
+	width: 30%;
+}
+
+thead th:nth-child(2) {
+	width: 20%;
+}
+
+thead th:nth-child(3) {
+	width: 15%;
+}
+
+thead th:nth-child(4) {
+	width: 35%;
+}
+
+th,
+td {
+	padding: 20px;
+}
