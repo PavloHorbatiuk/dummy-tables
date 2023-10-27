@@ -15,16 +15,21 @@ interface ITabs {
 
 export const NavTabs = ({ tabs }: ITabs): JSX.Element => {
     return (
-        <List sx={style} component='nav' aria-label='mailbox folders'>
+        <>
             {tabs.map((tab) => (
-                <>
-                    <ListItem key={tab.id} button divider>
+                <List
+                    key={tab.id}
+                    sx={style}
+                    component='nav'
+                    aria-label='mailbox folders'
+                >
+                    <ListItem button divider>
                         <AppLink to={`/${tab.id}`}>
                             <ListItemText primary={tab.title} />
                         </AppLink>
                     </ListItem>
-                </>
+                </List>
             ))}
-        </List>
+        </>
     );
 };

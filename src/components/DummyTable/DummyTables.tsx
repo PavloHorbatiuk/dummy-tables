@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { type TabType } from "./types";
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 import { NavTabs } from "./NavTabs";
+import { RoutePath } from "shared/routeConfig/routeConfig";
 
 interface TableData {
     tables: TabType[];
@@ -9,6 +10,7 @@ interface TableData {
 
 function DummyTable(): JSX.Element {
     const [tabs, setTabs] = useState<TabType[]>([]);
+    const navigate = useNavigate();
 
     const fetchDataTable = async (): Promise<void> => {
         try {
@@ -22,7 +24,10 @@ function DummyTable(): JSX.Element {
 
     useEffect(() => {
         void fetchDataTable();
-    }, []);
+        if (tabs.length) {
+            navigate(RoutePath.dummyTable);
+        }
+    }, [navigate, tabs]);
 
     return (
         <div>

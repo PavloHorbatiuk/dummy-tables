@@ -1,9 +1,15 @@
 const DummyChart = (): JSX.Element => (
     <table>
-        <tr>
-            <td>Dummy</td>
-            <td>Chart</td>
-        </tr>
+        <thead>
+            <tr>
+                <th>Dummy</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Chart</td>
+            </tr>
+        </tbody>
     </table>
 );
 
