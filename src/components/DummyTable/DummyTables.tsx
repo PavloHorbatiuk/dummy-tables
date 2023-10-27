@@ -17,6 +17,7 @@ function DummyTable(): JSX.Element {
             const data: TableData = await import("./../../../tabs.json");
             const tables = data.tables;
             setTabs(tables);
+            navigate(RoutePath.dummyTable);
         } catch (error) {
             console.error("Error fetching data:", error);
         }
@@ -24,10 +25,7 @@ function DummyTable(): JSX.Element {
 
     useEffect(() => {
         void fetchDataTable();
-        if (tabs.length) {
-            navigate(RoutePath.dummyTable);
-        }
-    }, [navigate, tabs]);
+    }, []);
 
     return (
         <div>
